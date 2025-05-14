@@ -74,3 +74,40 @@ public class ElectricityPricesLT {
     <artifactId>json</artifactId>
     <version>20210307</version>
 </dependency>
+
+
+
+
+
+
+Weather forecast API:
+import okhttp3.*;
+
+public class WeatherAPIExample {
+    public static void main(String[] args) {
+        String apiKey = "e38a66095e5e4e22a87100213251405";
+        String city = "Vilnius";
+
+        OkHttpClient client = new OkHttpClient();
+
+        HttpUrl url = new HttpUrl.Builder()
+            .scheme("https")
+            .host("api.weatherapi.com")
+            .addPathSegment("v1")
+            .addPathSegment("current.json")
+            .addQueryParameter("key", apiKey)
+            .addQueryParameter("q", city)
+            .build();
+
+        Request request = new Request.Builder().url(url).build();
+
+        try (Response response = client.newCall(request).execute()) {
+            if (!response.isSuccessful()) {
+                throw new IOException("Error: " + response.code() + " - " + response.message());
+            }
+            System.out.println(response.body().string());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
