@@ -1,0 +1,8 @@
+com\mycompany\kvk\DatabaseConnection.class
+module-info.class
+com\mycompany\kvk\App.class
+com\mycompany\kvk\ElectricityPriceFetcher.class
+com\mycompany\kvk\WeatherService.class
+com\mycompany\kvk\PrimaryController.class
+com\mycompany\kvk\ScenarioMatcher.class
+com\mycompany\kvk\ScenarioMatcher$Scenario.class
