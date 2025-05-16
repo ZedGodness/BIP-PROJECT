@@ -1,0 +1,107 @@
+.root {
+    -fx-background-color: #121212;
+}
+
+/* Universal text styling - applies to all states */
+* {
+    -fx-text-fill: white !important;
+    -fx-fill: white !important;
+}
+
+/* Force all text elements to stay white in all states */
+.text, .label, .button, .text-input, .text-area, 
+.check-box, .radio-button, .choice-box, .combo-box, 
+.menu-item, .tooltip, .slider .axis {
+    -fx-text-fill: white !important;
+    -fx-fill: white !important;
+}
+
+/* Specific button states to maintain white text */
+.button, .button:hover, .button:pressed, .button:focused, 
+.button:armed, .button:disabled {
+    -fx-text-fill: white !important;
+}
+
+.info-panel {
+    -fx-background-color: #1e1e1e;
+    -fx-background-radius: 8;
+    -fx-border-color: #2e2e2e;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5, 0, 0, 1);
+    -fx-padding: 10;
+}
+
+.scenario-panel {
+    -fx-background-color: #1e1e1e;
+    -fx-background-radius: 8;
+    -fx-border-color: #2e2e2e;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5, 0, 0, 1);
+    -fx-padding: 15;
+}
+
+.panel-title {
+    -fx-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.dark-button {
+    -fx-background-color: #2e2e2e;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-border-color: #3e3e3e;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+    -fx-padding: 8 15;
+    -fx-font-size: 12px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 3, 0, 0, 1);
+}
+
+.dark-button:hover {
+    -fx-background-color: #3e3e3e;
+    -fx-cursor: hand;
+}
+
+.dark-button:pressed {
+    -fx-background-color: #1e1e1e;
+}
+
+/* Remove focus ring */
+.button:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.dark-slider .track {
+    -fx-background-color: #2e2e2e;
+    -fx-background-radius: 2;
+}
+
+.dark-slider .thumb {
+    -fx-background-color: #4e4e4e;
+    -fx-background-radius: 5;
+}
+
+.dark-slider .axis {
+    -fx-tick-label-fill: white;
+}
+
+.tooltip {
+    -fx-text-fill: white;
+    -fx-background-color: #333333;
+    -fx-background-radius: 4;
+}
+
+.menu-bar, .menu, .menu-item, .context-menu {
+    -fx-text-fill: white;
+    -fx-background-color: #1e1e1e;
+}
+
+/* Force all text in controls to stay white */
+.check-box .box .mark,
+.radio-button .radio .dot {
+    -fx-background-color: white;
+}
